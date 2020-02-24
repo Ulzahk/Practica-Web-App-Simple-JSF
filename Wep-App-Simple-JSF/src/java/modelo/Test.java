@@ -16,6 +16,7 @@ import javax.faces.bean.ApplicationScoped;
 @ApplicationScoped
 public class Test {
     private String user, pwd;
+    private Integer pais, puntoCardinal;
     /**
      * Creates a new instance of Test
      */
@@ -37,7 +38,21 @@ public class Test {
     public void setPwd(String pwd) {
         this.pwd = pwd;
     }
-    
-    
-    
+
+    public Integer getPais() {
+        return pais;
+    }
+
+    public void setPais(Integer pais) {
+        this.pais = pais;
+    }
+
+    public Integer getPuntoCardinal() {
+        return puntoCardinal;
+    }
+
+    public void setPuntoCardinal(Integer puntoCardinal) {
+        this.puntoCardinal = puntoCardinal;
+    }
+
 }
