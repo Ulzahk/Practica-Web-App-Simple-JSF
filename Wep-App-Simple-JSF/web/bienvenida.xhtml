@@ -3,7 +3,8 @@
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html lang="es"
       xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://java.sun.com/jsf/html">
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
         <title>JEE - JSF</title>
     </h:head>
@@ -19,6 +20,18 @@
                 <h:inputSecret value="#{test.pwd}"
                                required="true"
                                requiredMessage="Error: introduce la contraseña"/>
+                <h:outputLabel value="Pais: " style="font-weight: bold"/>
+                <h:selectOneListbox value="#{test.pais}" size="1">
+                    <f:selectItem itemValue="1" itemLabel="Colombia"/>
+                    <f:selectItem itemValue="2" itemLabel="Brasil"/>
+                    <f:selectItem itemValue="3" itemLabel="Peru"/>
+                </h:selectOneListbox>
+                <h:selectOneRadio value="#{test.puntoCardinal}">
+                    <f:selectItem itemValue="1" itemLabel="Norte"/>
+                    <f:selectItem itemValue="2" itemLabel="Sur"/>
+                    <f:selectItem itemValue="3" itemLabel="Este"/>
+                    <f:selectItem itemValue="4" itemLabel="Oeste"/>
+                </h:selectOneRadio>
                 <h:commandButton id="submit" value="Login" action="respuesta"/>
                 <h:commandButton id="reset" value="Clear" type="reset"/>
             </h:panelGrid>
